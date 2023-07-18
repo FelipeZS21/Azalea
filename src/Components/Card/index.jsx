@@ -6,6 +6,11 @@ const Card = (data) =>{
 
     const context = useContext(ShoppingCartContext)
 
+    const showProduct = (productDetail) =>{
+        context.openProductDetail()
+        context.setProductToShow(productDetail)
+    }
+
     return(
         <div className='bg-white cursor-pointer w-56 h-60 rounded-lg'>
             <figure className='relative mb-2 w-full h-4/5'>
@@ -14,7 +19,7 @@ const Card = (data) =>{
                     className='w-full h-full object-cover rounded-lg'
                     src={data.data.image} 
                     alt={data.data.title} 
-                    onClick={() => context.openProductDetail()}
+                    onClick={() => showProduct(data.data)}
                 />
                 <div 
                     className='absolute top-0 right-0 flex justify-center items-center bg-white w-6 h-6 rounded-full m-2 p-0.5'
@@ -25,7 +30,7 @@ const Card = (data) =>{
             </figure>
             <p 
                 className='flex justify-between'
-                onClick={() => context.openProductDetail()}
+                onClick={() => showProduct(data.data)}
             >
                 <span className='text-sm font-light mr-2 truncate'>{data.data.title}</span>
                 <span className='text-lg font-medium'>${data.data.price}</span>
