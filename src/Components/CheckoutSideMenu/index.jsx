@@ -1,6 +1,7 @@
 import './styles.css'
 import { ArrowLeftIcon } from '@heroicons/react/24/outline'
 import { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import OrderCard from '../OrderCard'
 import { ShoppingCartContext } from '../../Context'
 import { totalPrice } from '../../utils'
@@ -36,7 +37,6 @@ const CheckoutSideMenu = () =>{
                     onClick={() => context.closeCheckoutSideMenu()}
                 />
             </div>
-
             <div className='px-6 overflow-y-scroll flex-1'>
                 {
                     context.cartProducts.map(product => (
@@ -56,9 +56,11 @@ const CheckoutSideMenu = () =>{
                     <span className='font-light'>Total: </span>
                     <span className='font-medium text-2xl'>${totalPrice(context.cartProducts)}</span>
                 </p>
-                <button className='w-full bg-black py-3 text-white rounded-lg' onClick={() => handleCheckout()}>
-                    Checkout
-                </button>
+                <Link to='/my-orders/last'>
+                    <button className='w-full bg-black py-3 text-white rounded-lg' onClick={() => handleCheckout()}>
+                        Checkout
+                    </button>
+                </Link>
             </div>
         </aside>
         
