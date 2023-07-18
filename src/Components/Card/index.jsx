@@ -14,15 +14,19 @@ const Card = (data) =>{
                     className='w-full h-full object-cover rounded-lg'
                     src={data.data.image} 
                     alt={data.data.title} 
+                    onClick={() => context.openProductDetail()}
                 />
                 <div 
                     className='absolute top-0 right-0 flex justify-center items-center bg-white w-6 h-6 rounded-full m-2 p-0.5'
                     onClick={() => context.setCount(context.count + 1)}
                     >
-                    <PlusIcon className="h-4 w-4 mt-1 mb-1 "/>
+                    <PlusIcon className="h-4 w-4 mt-1 mb-1 cursor-pointer"/>
                 </div>
             </figure>
-            <p className='flex justify-between'>
+            <p 
+                className='flex justify-between'
+                onClick={() => context.openProductDetail()}
+            >
                 <span className='text-sm font-light mr-2 truncate'>{data.data.title}</span>
                 <span className='text-lg font-medium'>${data.data.price}</span>
             </p>
