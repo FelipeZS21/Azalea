@@ -14,6 +14,10 @@ import { NavBar } from '../../Components/NavBar'
 const AppRoutes = () =>{
   let routes = useRoutes([
     {path: '/', element: <Home/>},
+    {path: '/mens-clothes', element: <Home/>},
+    {path: '/electronics', element: <Home/>},
+    {path: '/womens-clothes', element: <Home/>},
+    {path: '/jewelery', element: <Home/>},
     {path: '/my-account', element: <MyAccount/>},
     {path: '/my-orders', element: <MyOrders/>},
     {path: '/my-orders/last', element: <MyOrder/>},
