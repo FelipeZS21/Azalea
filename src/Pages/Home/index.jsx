@@ -9,29 +9,18 @@ function Home() {
     const context = useContext(ShoppingCartContext)
 
     const renderView = () =>{
-        if(context.searchByTitle?.length > 0){
-            if(context.filteredItems?.length > 0){
-                return(
-                    context.filteredItems?.map(item => (
-                        <Card
-                            key={item.id} 
-                            data= {item}
-                        />
-                    ))
-                )
-            }else{
-                return(
-                    <div>We don't have anything :D</div>
-                )
-            }
-        }else{
+        if(context.filteredItems?.length > 0){
             return(
-                context.items?.map(item => (
+                context.filteredItems?.map(item => (
                     <Card
                         key={item.id} 
                         data= {item}
                     />
                 ))
+            )
+        }else{
+            return(
+                <div>We don't have anything :D</div>
             )
         }
     }
@@ -41,7 +30,7 @@ function Home() {
                 <h1 className="font-medium text-xl">Exclusive Products</h1>
             </div>
             <input 
-                className="rounded-lg border border-black w-80 p-4 mb-4 focus: outline none"
+                className="rounded-lg border border-black-500 w-80 p-4 mb-4 focus: outline none"
                 onChange={(event) => context.setSearchByTitle(event.target.value) }
                 type="text" 
                 placeholder="Search a product"
