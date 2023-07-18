@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { PlusIcon } from '@heroicons/react/24/outline'
+import { PlusIcon, CheckIcon } from '@heroicons/react/24/outline'
 import { ShoppingCartContext } from "../../Context";
 
 const Card = (data) =>{
@@ -18,6 +18,30 @@ const Card = (data) =>{
         context.openCheckoutSideMenu()
     }
 
+    const renderIcon = (id) =>{
+
+        const isInCart = context.cartProducts.filter(product => product.id === id).length > 0 
+
+        if(isInCart){
+            return (
+                <div 
+                    className='absolute top-0 right-0 flex justify-center items-center bg-green-500 w-6 h-6 rounded-full m-2 p-0.5'
+                >
+                    <CheckIcon className="h-4 w-4 mt-1 mb-1 text-white"/>
+                </div>
+            )
+        }else{
+            return (
+                <div 
+                    className='absolute top-0 right-0 flex justify-center items-center bg-white w-6 h-6 rounded-full m-2 p-0.5'
+                    onClick={(event) => addProductsToCar(event,data.data)}
+                >
+                    <PlusIcon className="h-4 w-4 mt-1 mb-1 cursor-pointer"/>
+                </div>
+            )
+        }
+    } 
+
     return(
         <div 
             className='bg-white cursor-pointer w-56 h-60 rounded-lg'
@@ -30,12 +54,7 @@ const Card = (data) =>{
                     src={data.data.image} 
                     alt={data.data.title} 
                 />
-                <div 
-                    className='absolute top-0 right-0 flex justify-center items-center bg-white w-6 h-6 rounded-full m-2 p-0.5'
-                    onClick={(event) => addProductsToCar(event,data.data)}
-                    >
-                    <PlusIcon className="h-4 w-4 mt-1 mb-1 cursor-pointer"/>
-                </div>
+                {renderIcon(data.data.id)}
             </figure>
             <p className='flex justify-between'>
                 <span className='text-sm font-light mr-2 truncate'>{data.data.title}</span>
