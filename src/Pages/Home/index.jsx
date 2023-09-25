@@ -26,17 +26,19 @@ function Home() {
     }
     return (
         <Layout>
-            <div className="flex items-center justify-center relative w-80 mb-4">
-                <h1 className="font-medium text-xl">Exclusive Products</h1>
+            <div className="flex items-center justify-center relative w-60 mb-4 ">
+                <picture>
+                    <img src="../../../public/Imgs/logo-azalea.png" alt="azalea-logo" />
+                </picture>
             </div>
-            <input 
+            {/*<input 
                 className="rounded-lg border border-black-500 w-80 p-4 mb-4 focus: outline none"
                 onChange={(event) => context.setSearchByTitle(event.target.value) }
                 type="text" 
                 placeholder="Search a product"
-            />
+            />*/}
             <div className="grid gap-4 grid-cols-4 w-full max-w-screen-lg">
-                {renderView()}
+                {/*renderview*/}
             </div>
             <ProductDetail/>
         </Layout>
