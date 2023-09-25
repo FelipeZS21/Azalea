@@ -1,5 +1,6 @@
 import { useContext, useEffect} from "react"
 import { Layout } from "../../Components/Layout"
+import { CallToAction } from "../../Components/CallToAction/CallToAction";
 import { Card } from "../../Components/Card"
 import ProductDetail from "../../Components/ProductDetail";
 import { ShoppingCartContext } from "../../Context";
@@ -31,6 +32,9 @@ function Home() {
                     <img src="../../../public/Imgs/logo-azalea.png" alt="azalea-logo" />
                 </picture>
             </div>
+            <CallToAction>
+
+            </CallToAction>
             {/*<input 
                 className="rounded-lg border border-black-500 w-80 p-4 mb-4 focus: outline none"
                 onChange={(event) => context.setSearchByTitle(event.target.value) }
@@ -40,7 +44,7 @@ function Home() {
             <div className="grid gap-4 grid-cols-4 w-full max-w-screen-lg">
                 {/*renderview*/}
             </div>
-            <ProductDetail/>
+            {/*<ProductDetail/>*/}
         </Layout>
     )
 }
