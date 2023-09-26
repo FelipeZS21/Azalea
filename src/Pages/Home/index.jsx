@@ -27,8 +27,8 @@ function Home() {
     }
     return (
         <Layout>
-            <div className="flex items-center justify-center relative w-60 mb-4 ">
-                <picture>
+            <div className="flex items-center justify-center relative w-full mb-4 bg-indigo-900">
+                <picture className="w-60">
                     <img src="../../../public/Imgs/logo-azalea.png" alt="azalea-logo" />
                 </picture>
             </div>
