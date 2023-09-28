@@ -21,7 +21,7 @@ const FormContact = () => {
 
   return (
     <div className="flex mx-auto mt-10 bg-gradient-to-r from-blue-950 via-blue-500 to-indigo-900 w-full font-Quicksand">
-      <form onSubmit={handleSubmit} className='w-1/2 p-6 bg-white m-3 rounded-md'>
+      <form onSubmit={handleSubmit} className='w-1/2 p-10 bg-white m-10 rounded-md'>
       <h2 className="text-4xl font-semibold mb-4 my-5">Contacta con nosotros</h2>
         <div className="mb-4">
           <label className="block">Nombre</label>
