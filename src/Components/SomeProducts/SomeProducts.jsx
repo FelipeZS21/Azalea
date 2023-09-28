@@ -12,10 +12,10 @@ const SomeProducts = () => {
             </p>
         </div>
         <div className='w-full flex justify-center'>
-            <img src="../public/Imgs/labial-logo.png" alt="" className='w-56 h-56'/>
-            <img src="../public/Imgs/brocha-logo.png" alt="" className='w-56 h-56'/>
-            <img src="../public/Imgs/pinturas-logo.png" alt="" className='w-56 h-56'/>
-            <img src="../public/Imgs/base-logo.png" alt="" className='w-56 h-56'/>
+            <img src="/Imgs/labial-logo.png" alt="" className='w-56 h-56'/>
+            <img src="/Imgs/brocha-logo.png" alt="" className='w-56 h-56'/>
+            <img src="/Imgs/pinturas-logo.png" alt="" className='w-56 h-56'/>
+            <img src="/Imgs/base-logo.png" alt="" className='w-56 h-56'/>
         </div>
     </div>
   );

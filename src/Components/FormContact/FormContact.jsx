@@ -111,16 +111,16 @@ const FormContact = () => {
           </ul>
           <div className="mt-7 flex">
             {/* Logos de redes sociales */}
-            <a href=""><img src="../public/Imgs/facebook.png" alt="Facebook" className="w-8 h-8 mr-2" /></a>
-            <a href=""><img src="../public/Imgs/Pinterest.png" alt="Twitter" className="w-8 h-8 mr-2" /></a>
-            <a href=""><img src="../public/Imgs/instagram-logo.png" alt="Instagram" className="w-8 h-8" /></a>
+            <a href=""><img src="/Imgs/Facebook.png" alt="Facebook" className="w-8 h-8 mr-2" /></a>
+            <a href=""><img src="/Imgs/Pinterest.png" alt="Twitter" className="w-8 h-8 mr-2" /></a>
+            <a href=""><img src="/Imgs/Instagram-logo.png" alt="Instagram" className="w-8 h-8" /></a>
           </div>
         </div>
         
         {/* Segunda columna */}
         <div className="w-full md:w-1/2">
           {/* Imagen */}
-          <img src="../Public/Imgs/logo-azalea-white.png" alt="Imagen de la sección" className=" rounded-full w-96 h-auto" />
+          <img src="/Imgs/logo-azalea-white.png" alt="Imagen de la sección" className=" rounded-full w-96 h-auto" />
         </div>
       </div>
     </div>
