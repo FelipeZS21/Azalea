@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily: {
         Quicksand: "'Quicksand', sans-serif",
+        YoungSerif: "'Young Serif', serif",
       }
     },
   },
