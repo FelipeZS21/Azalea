@@ -28,7 +28,7 @@ const CallToAction = ({ children }) =>{
                     </div>
                     <div className=" w-2/4 flex">
                         <picture className="w-full">
-                            <img src="../../../public/Imgs/wallpaper2.png" alt="" />
+                            <img src="../../public/Imgs/wallpaper2.png" alt="" />
                         </picture>
                     </div>
                 </section>
