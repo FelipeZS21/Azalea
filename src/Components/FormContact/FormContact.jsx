@@ -20,7 +20,7 @@ const FormContact = () => {
   };
 
   return (
-    <div className="flex flex-col mx-auto my-10 bg-gradient-to-r from-blue-950 via-blue-500 to-indigo-900 w-full font-Quicksand">
+    <div className="flex mx-auto mt-10 bg-gradient-to-r from-blue-950 via-blue-500 to-indigo-900 w-full font-Quicksand">
       <form onSubmit={handleSubmit} className='w-1/2 p-6 bg-white m-3 rounded-md'>
       <h2 className="text-4xl font-semibold mb-4 my-5">Contacta con nosotros</h2>
         <div className="mb-4">
@@ -86,6 +86,44 @@ const FormContact = () => {
           Enviar
         </button>
       </form>
+
+      <div className=" p-8 w-1/2 text-white">
+      <div className="container mx-auto flex flex-wrap">
+        {/* Primera columna */}
+        <div className="w-full md:w-1/2 mb-6 md:mb-0">
+          <h2 className="text-2xl font-semibold mb-4">Enlaces</h2>
+          <ul className="list-none p-0">
+            <li className="mb-2">
+              <a href="#" className=" hover:underline">Política de privacidad</a>
+            </li>
+            <li className="mb-2">
+              <a href="#" className=" hover:underline">Catálogo</a>
+            </li>
+            <li className="mb-2">
+              <a href="#" className="hover:underline">Términos y condiciones</a>
+            </li>
+            <li className="mb-2">
+              <a href="#" className="hover:underline">Quienes somos</a>
+            </li>
+            <li className="mb-2">
+              <a href="#" className="hover:underline">(+57) 310-435-6282</a>
+            </li>
+          </ul>
+          <div className="mt-7 flex">
+            {/* Logos de redes sociales */}
+            <a href=""><img src="../../../Public/Imgs/facebook.png" alt="Facebook" className="w-8 h-8 mr-2" /></a>
+            <a href=""><img src="../../../Public/Imgs/Pinterest.png" alt="Twitter" className="w-8 h-8 mr-2" /></a>
+            <a href=""><img src="../../../Public/Imgs/instagram-logo.png" alt="Instagram" className="w-8 h-8" /></a>
+          </div>
+        </div>
+        
+        {/* Segunda columna */}
+        <div className="w-full md:w-1/2">
+          {/* Imagen */}
+          <img src="../../../Public/Imgs/logo-azalea-white.png" alt="Imagen de la sección" className=" rounded-full w-96 h-auto" />
+        </div>
+      </div>
+    </div>
     </div>
   );
 };

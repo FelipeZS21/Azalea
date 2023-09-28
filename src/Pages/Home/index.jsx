@@ -31,8 +31,8 @@ function Home() {
     return (
         <Layout>
             <CallToAction></CallToAction>
-            <Benefits></Benefits>
             <SomeProducts></SomeProducts>
+            <Benefits></Benefits>
             <FormContact></FormContact>
             {/*<input 
                 className="rounded-lg border border-black-500 w-80 p-4 mb-4 focus: outline none"
