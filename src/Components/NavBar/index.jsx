@@ -17,7 +17,7 @@ const NavBar = () =>{
                     >
                         <div className="flex items-center justify-center relative w-full">
                             <picture className="w-full">
-                                <img className="w-32" src="../../public/Imgs/logo-azalea-white.png" alt="azalea-logo" />
+                                <img className="w-32" src="../public/Imgs/logo-azalea-white.png" alt="azalea-logo" />
                             </picture>
                         </div>
                     </NavLink>
