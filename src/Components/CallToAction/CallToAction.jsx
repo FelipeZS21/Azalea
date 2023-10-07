@@ -1,6 +1,8 @@
+import { NavLink } from "react-router-dom"
+
 const CallToAction = ({ children }) =>{
     return(
-        <div className="flex flex-col bg-gradient-to-r from-blue-950 via-blue-500 to-indigo-900 mt-20 items-center">
+        <div className="relative flex flex-col bg-gradient-to-r from-blue-950 via-blue-500 to-indigo-900  items-center">
             <div className="flex w-full mt-10">
                 <section className="flex items-center">
                     <div className="flex flex-col px-10 m-2 w-4/5 justify-center text-white">
@@ -21,9 +23,11 @@ const CallToAction = ({ children }) =>{
                             </h3>
                         </div>
                         <div className="my-4">
-                            <button className="font-Quicksand text-indigo-900 bg-white w-36 h-10 rounded-lg text-black transition hover:text-white hover:bg-blue-500 duration-300">
-                                <h2 className="font-bold">Registrate</h2>
-                            </button>
+                            <NavLink to='/Session'>
+                                <button className="font-Quicksand text-indigo-900 bg-white w-36 h-10 rounded-lg text-black transition hover:text-white hover:bg-blue-500 duration-300">
+                                    <h2 className="font-bold">Registrate</h2>
+                                </button>   
+                            </NavLink>
                         </div>
                     </div>
                     <div className=" w-2/4 flex">

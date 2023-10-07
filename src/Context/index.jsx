@@ -8,6 +8,25 @@ export const ShoppingCartProvider = ({children}) =>{
     // Shopping Cart - Increment quantity
     const [count, setCount] = useState(0)
 
+    // Estado para almacenar los datos del formulario
+    const [userData, setUserData] = useState({ name: '',email: '', phone: ''});
+
+    // Manejar cambios en los campos del formulario
+    const handleInputChangeUserData = (event) => {
+        const { name, value } = event.target;
+        setUserData({
+            ...userData,
+            [name]: value,
+        });
+    };
+
+    // Manejar envío del formulario
+    const handleSubmitUserData = (event) => {
+        event.preventDefault();
+        // Aquí puedes agregar la lógica para enviar los datos del formulario al servidor
+        console.log('Datos de inicio de sesión enviados:', userData);
+    };
+
     // Product Detail - Open/Close 
     const [isProductDetailOpen, setisProductDetailOpen] = useState(false)
     const openProductDetail = () => setisProductDetailOpen(true)
@@ -71,6 +90,10 @@ export const ShoppingCartProvider = ({children}) =>{
 
     return (
         <ShoppingCartContext.Provider value={{
+            userData,
+            setUserData,
+            handleInputChangeUserData,
+            handleSubmitUserData,
             count, 
             setCount, 
             openProductDetail, 
