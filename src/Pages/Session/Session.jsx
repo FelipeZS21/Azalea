@@ -8,11 +8,13 @@ function Session() {
     const context = useContext(ShoppingCartContext)
 
     return (
-    <div className="login-form">
+    <div className="register-users-form">
         <h1>Registrate gratis!</h1>
         <form onSubmit={context.handleSubmitUserData}>
-            <div className="form-group">
-                <label htmlFor="name">Nombre: </label>
+            <div className="register-users-form-group">
+                <label htmlFor="name">
+                    <img src="/Imgs/user-logo.svg" alt="" />
+                </label>
                 <input
                 type="text"
                 id="name"
@@ -20,10 +22,13 @@ function Session() {
                 value={context.userData.name}
                 onChange={context.handleInputChangeUserData}
                 required
-                />
+                placeholder='Nombre'
+                ></input>
             </div>
-            <div className="form-group">
-                <label htmlFor="email">Correo Electrónico:</label>
+            <div className="register-users-form-group">
+                <label htmlFor="email">
+                    <img src="/Imgs/email.svg" alt="" />
+                </label>
                 <input
                 type="email"
                 id="email"
@@ -31,10 +36,13 @@ function Session() {
                 value={context.userData.email}
                 onChange={context.handleInputChangeUserData}
                 required
+                placeholder='Email'
                 />
             </div>
-            <div className="form-group">
-                <label htmlFor="phone">celular:</label>
+            <div className="register-users-form-group">
+                <label htmlFor="phone">
+                    <img src="/Imgs/phone.svg" alt="" />
+                </label>
                 <input
                 type="number"
                 id="phone"
@@ -42,6 +50,7 @@ function Session() {
                 value={context.userData.phone}
                 onChange={context.handleInputChangeUserData}
                 required
+                placeholder='Telefono'
             />
             </div>
             <button type="submit">Registrate</button>

@@ -1,0 +1,33 @@
+.register-users-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-users-form-group{
+    display: flex;
+    margin: 2rem; 
+}
+
+.register-users-form-group input{
+    padding: 0.5rem;
+    width: 100%;
+    background-color: rgba(116, 116, 116, 0.705);
+    border-radius: 0 2rem 2rem 0;
+}
+
+.register-users-form-group label{
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    background-color: rgba(116, 116, 116, 0.705);
+    border-radius: 2rem 0 0 2rem;
+}
+
+.register-users-form-group label img{
+    width: 100%;
+}
+
+input::placeholder{
+    color: #fcfcfce8; 
+}
