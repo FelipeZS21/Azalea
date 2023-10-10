@@ -1,12 +1,8 @@
 import { useContext, useEffect} from "react"
 import { Layout } from "../../Components/Layout"
-import { CallToAction } from "../../Components/CallToAction/CallToAction";
 import { Card } from "../../Components/Card"
-import ProductDetail from "../../Components/ProductDetail";
 import { ShoppingCartContext } from "../../Context";
-import { Benefits } from "../../Components/Benefits/Benefits";
-import { SomeProducts } from "../../Components/SomeProducts/SomeProducts";
-import { FormContact } from "../../Components/FormContact/FormContact";
+import { Landing } from "../../Components/Landing/Landing";
 
 function Home() {
 
@@ -30,10 +26,7 @@ function Home() {
     }
     return (
         <Layout>
-            <CallToAction></CallToAction>
-            <SomeProducts></SomeProducts>
-            <Benefits></Benefits>
-            <FormContact></FormContact>
+            <Landing/>
             {/*<input 
                 className="rounded-lg border border-black-500 w-80 p-4 mb-4 focus: outline none"
                 onChange={(event) => context.setSearchByTitle(event.target.value) }

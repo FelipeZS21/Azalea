@@ -2,7 +2,7 @@ import React from 'react';
 
 const Benefits = () => {
   return (
-    <div className="w-full flex justify-between my-10">
+    <div className="md:mt-20 w-full flex justify-between my-10">
       {/* Primera sección */}
       <div className="w-1/3 p-4">
         <img src="/Imgs/logo-regalo.png" alt="Logo 1" className="w-20 h-20 mx-auto" />
